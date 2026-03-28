@@ -2,8 +2,8 @@
         <h1>The never-ending AI!</h1>
         <h3>This is the output of a text-predicting AI being constantly fed back what it generates. <br>
         Except it's not a particularly smart one, and it has the memory of a goldfish.</h3>
-        <h3>Currently at 66,327 words (397,760 characters). <br>
-        The website updates every 5 minutes or so. Last updated at 06:22 on 29/03/26</h3>
+        <h3>Currently at 67,755 words (408,031 characters). <br>
+        The website updates every 5 minutes or so. Last updated at 06:44 on 29/03/26</h3>
         <h6>AI may produce mistakes/offensive language! Read at your own discretion!</h6>
         <h3>Original prompt: "Hello!"</h3>
         <pre style="white-space: pre-wrap; word-wrap: break-word; border: 1px solid #ccc; padding: 10px;">
@@ -6634,6 +6634,202 @@ This can also be written as the product of two conjugates. This generalizes to c
 {{1/2} \Rightarrow \operatorname{Complex}(\cos(x),\;0,\cos(x))\ldots} and
 {{2/3} \Rightarrow \operatorname{Conjugate}(\operatorname{Complex}(\cos(x),\;0,\cos(x)),\cos(x)\mathrm{i}\,-\operatorname{Re}(-x)),\;0,\,x =\,0.
 
-### Complex numbers with imaginary unit$
+### Complex numbers with imaginary unit$aI$
+
+The real and imaginary parts of any complex $3n - 2$-element vector can be separated into its parts associated with $\mathrm{i}$-axes and vice-versa if the basis vectors are extended to a $3n - 2$-dimensional real or imaginary unit basis. This is the basis-line theorem: if we define a basis of $n$-directions vectors, the coordinates of a particle in the $n$-dimensional space are defined by the Cartesian coordinates of the basis vectors.
+
+These coordinate systems are often referred to as the $n$-vectors. The first $n$-vectors are usually referred to as the principal components $\bar{\mathbf{v}}$. The first dimension is the most important, and the second dimension is often used for large datasets. The second dimension is the degree of freedom, where a vector is the product of the first and the second basis vectors. The first vector of the first dimension will always be $\bar{u}_1= \begin{bmatrix} a_1 u_1 \\ a_2 u_1 \\ \vdots \\ a_m u_1 \\ a_n u_1 \\ \end{bmatrix}$. The second vector of the second dimension will be $b$ and the third vector the other two.
+
+
+$$ \text{The transpose of a matrix is obtained by appending the second term to the left of the third term in the matrix representation. The result is the product of the second term and the product of the third term. }$$
+
+
+And there you have it! You can transform matrices of any size into matrices that are of the same size (the size can be a scalar). But these transformations still have elements that are non-unique, so one can choose them by adding and removing elements with no effect on other entries.
+
+Now consider a vector in R^n which is the output of a linear transformation of space, a complex operation. If I write x in matrix notation I can write out all possible operations:
+
+$$\left[ x \right] = \sum_n e^{i \text{matrix entry} n}$$
+
+If I write down the output of multiplication a complex operation, I can write out an expression for the complex output of multiplication the matrix:
+
+$$\left[ x \right]_{m}^{n} = x^{m} \times x^{n} = \begin{bmatrix} 1 &amp; -1 &amp; \cdots &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0\\ 0 &amp; 2 &amp; -3 &amp; 2 &amp; -4 &amp; 2\\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \end{bmatrix} = e^{i \text{matrix entry}} = \begin{bmatrix} 1 &amp; \cdots &amp; 1 &amp; 1 &amp; \cdots &amp; 1\end{bmatrix} = e^{i \text{identity matrix}} = \begin{bmatrix} 1 &amp; \cdots &amp; 1 &amp; -1 &amp; -1 &amp; -1 &amp; \cdots &amp; \cdots &amp; \cdots &amp; -1 \end{bmatrix} = \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; -1 &amp; 0 &amp; \cdots &amp; -1 \end{bmatrix} \begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{bmatrix}
+
+which results in the identity matrix.
+
+
+In higher dimensions, and as such for large numbers of dimension 1 matrices of the form described above, the inverse method of solving systems of equations can be used to solve systems in linear algebra. In this case
+
+S = |[x_i][y_j])  |  |S=y_i y_j y_j y_i
+
+is called the inverse matrix and has the row-dependent columns of x_i y_i, the col-dependent rows of y_j y_j, and the row-dependent columns of x_j x_j.
+
+For x=y=0 there is a unique solution to this equation:
+
+|S|=S = S S S = |(xy)2 || yy|| = 1 (0 = 1) + (0 = 0.5) = 1 .
+
+Thus the inverse matrix is the unique eigenvalue solution to this system of equations, which is a characteristic function. Moreover, this approach is applicable to systems of linear equations with a unique diagonal matrix.
+
+However, it is possible that a particular orthogonal matrix, which does not have the necessary properties, satisfies a linear characteristic curve of a square matrix.
+
+Another example of such orthogonal matrix is shown in Figure 3, where each eigenvector $\vec{v}$ has magnitude s, meaning that the variance of the vector $\vec{v}$ equals s2
+
+In this sense, a matrix has a magnitude of 100.
+
+Definition 2
+
+An orthogonal matrix is a matrix obtained by applying one (or more) orthogonal transformations (one-dimensional translations, rotations, ...) on the two-dimensional coordinates
+
+S
+
+$\begin{pmatrix} \vec{x}_1 \\ \vec{x}_2 \\ \vdots \\ \vec{x}_n \\ \vdots \end{pmatrix}=\vec{v}_1 \cdot \vec{v}_1 \cdot \cdots \cdot \vec{v}_ne^{-\alpha T}\vec{v}_ne^{-1}\vec{v}_n \end{pmatrix} \quad(i_1,\ldots ,i_n) =\vec{v}_1\cdot \vec{v}_1\cdot \cdots \cdot \vec{v}_ne^{-\alpha T} .$
+
+\begin{eqnarray} \vec{v}_1 \leftarrow \vec{v}_1 \leftarrow \cdots \end{eqnarray}
+
+This is the point of view on which the system is being considered. If we consider a subsystem $S$ by the process $\delta_1[i_1,\ldots,i_n] \rightarrow \delta_2[0,\ldots,n]$ we obtain equations $S\delta_1[i_1,i_n\geq 0] \rightarrow \delta S^1[i_1]$, which is $\delta^2[i_1,i_n) \rightarrow \delta^1\,S^1[i_1]$.
+
+The following results are derived from this algorithm, they are all obtained after $n$ steps with the cost of $n$ nodes in a graph.
+
+If we think of $\gamma_1$ as the cost of a node first in a graph, we would then see that the cost of finding a node after $\gamma_1$ is roughly less than the cost of finding the node itself, so the cost of finding a node after $\gamma_1$ will be roughly $1-\gamma_1$ as the cost of creating a new node. If the cost of finding a new node is equal to the cost of finding $c_0$, then the total cost of this search is $1-\gamma_1$ in each depth-first tree to each subtree rooted at the $c_0$. So I think the solution in (14.10) is to search tree(19.1) starting with $c_1$, and then, if the new node is already found, continue traversing tree(20.7) to start a new search in tree(6.1), thus allowing us to solve a binary search. Note that we may also seek tree(7.6) for a node in the first level of tree(6.1). We may then traverse tree(19.1), but in this case we need to traverse both the left and right subtrees of tree(20.7) of that level. This means that we need to traverse both the root, tree(9.1), and each node in that level of tree(19.1), since each node in tree(19.1) is a subquery within tree(20.7). Again, only the left child(N) of a node has to be visited to find where the branch of branch(N) should end. The path to that branch branch(N) then goes directly from the root (20.7-20.8) to the first level of branch(N) to the leaf(5) and the last level of branch(N) to the root (20.8).
+
+To see how branching works, add the below line to the code in this file:
+
+def branchRoot(path):
+    def subPath(path+PATHNAME_DIR):
+        root = Path.get(path)
+        tree = Root.constructTree(root)
+
+        # Find the left or right sub folder path of the parent path
+        leftChild = subPath(tree[&#x27;left&#x27;]).resolveFilename()
+        rightChild = subPath(tree[&#x27;right&#x27;]).resolveFilename()
+        return str(leftChild) + &#x27;-&#x27; + str(rightChild)
+
+    def __init__(self, root=None, childs=None):
+        self.root = root
+
+    @staticmethod
+    def combine(leftNode, rightNode):
+        if leftNode == None:#没有根目录
+            return None
+        if leftNode.name == &#x27;root&#x27;:
+            return None
+
+        if rightNode == None:#没有目录下的操作区间
+            return None
+
+        if not isinstance(leftNode.name, str):
+            # print(leftNode.name, &#x27;违反类��&#x27;, type(leftNode.name))
+            return None
+        leftChilds = list(dictOfNode.items())
+        leftChilds[-1] = leftChilds[-1][&#x27;left_left&#x27;]
+        leftChilds[-1][&#x27;right_left&#x27;] = leftChilds[-1][&#x27;right_right&#x27;]
+        leftChilds[-1][&#x27;left_right&#x27;] = leftChilds[-1][&#x27;left_right_left&#x27;]
+        leftChilds[-1][&#x27;right_left&#x27;] = leftChilds[-1][&#x27;right_right&#x27;]
+        rightNode = rightChilds[0]
+        if rightChilds[-1][&#x27;left_left&#x27;] != &#x27;left-right&#x27;:
+            for rightChild in rightChilds[::-1]:
+                rightCnt += 1
+        if rightChilds[-1][&#x27;right_right&#x27;] != &#x27;right-right&#x27;:
+            for rightChild in rightChilds[::-1]:
+                rightCnt += 1
+                
+        leftChilds = (leftChilds + rightChilds[-1]).copy()
+        rightCnt = 1
+        for rightChild in rightChilds:
+            rightCnt += 1
+            if rightChild &gt;= len(rightCnt) - 1:
+                rightCnt = 0
+        
+        return leftCnt, rightCnt
+        
+    def getTreeSize(self, parent):
+        leftChilds = (parent.leftChilds).get_size()
+        rightChilds = (parent.rightChilds).get_size()
+        
+        if leftChilds &gt; rightChilds:
+            print(&quot;INVALID&quot;)
+        else:
+            leftChildrenCount = 0
+                #if leftChilds &gt;rightChilds and leftChilds &gt;rightChildren:
+                #return leftChildrenCount
+
+            #leftChilds, rightChilds = 0, 0
+            #while ((leftChilds &lt; rightChilds) and parent.leftChild(nextChild) == leftChild) and rightChilds &lt; parent.leftChild(nextChild)):
+                #parent.removeChild(nextChild)
+            if parent:
+                parent.removeChild(nextChild)
+
+             # while (currentChild != n) {
+                # parent.insertChild(currentChild)
+                # currentChild = parent
+
+
+             # parent = currentChild
+                # if not parent.leftChild(newChild) and not parent.rightChild(newChild):
+                #     parent = nextChild
+                #     parent.removeChild(newChild)
+                # else:
+                #     parent.insertChild(parent, currentChild)
+                # break
+
+
+&quot;&quot;&quot;
+def generate_lchild__(root):
+    if root:
+        return generate_lchild(root)
+
+    else:
+        return -1
+
+
+def generate_rchild__(root):
+    if root:
+        return generate_rchild(root)
+
+    else:
+        return -1
+
+
+&quot;&quot;&quot;
+
+root = None
+
+while True:
+    if root is not None and root.leftChild() is None:
+        generate_lchild(root)
+        break
+
+    if root is None:
+        generate_rbchild(root)
+        break
+
+    if root is not None:
+        root = root.leftChild()
+
+    root = root.rightChild()
+
+    if not is_valid_position_in_tree(root):
+        break
+
+    def find_next_child_root(node):
+        parentNode = node.parent
+        if parentNode is None:
+            return None
+        if parentNode.parent is None:
+            return parentNode
+        while not root.rightChild():
+            root.rightChild = parentNode
+        parentNode.rightChild = root.rightChild
+        root = parentNode
+        return root
+
+    def dfs(root):
+        if not root:
+            return
+
+    def dfs2(root):
+        is_rightChild = False
+        is_leftChild = False
+        node = root
+        while node
         </pre>
         
