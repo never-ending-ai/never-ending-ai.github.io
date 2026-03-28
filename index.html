@@ -2,8 +2,8 @@
         <h1>The never-ending AI!</h1>
         <h3>This is the output of a text-predicting AI being constantly fed back what it generates. <br>
         Except it's not a particularly smart one, and it has the memory of a goldfish.</h3>
-        <h3>Currently at 79,642 words (478,168 characters). <br>
-        The website updates every 5 minutes or so. Last updated at 10:33 on 29/03/26</h3>
+        <h3>Currently at 80,751 words (485,019 characters). <br>
+        The website updates every 5 minutes or so. Last updated at 10:41 on 29/03/26</h3>
         <h6>AI may produce mistakes/offensive language! Read at your own discretion!</h6>
         <h3>Original prompt: "Hello!"</h3>
         <pre style="white-space: pre-wrap; word-wrap: break-word; border: 1px solid #ccc; padding: 10px;">
@@ -9334,6 +9334,1084 @@ To make this hierarchy clear we must use the term hierarchy.
 
 The following example shows a Hierarchy with two trees. If you want 
            to see a diagram of the hierarchy of the existing classes 
-           without the
+           without the concept of hierarchy (as defined above) you 
+           will have to work on a similar site than mine.
+
+A class that only inherits a parent class (like a sibling) can use 
+           its own implementations, so it cannot inherit the hierarchy 
+           with it.
+
+           In each class (i.e. in each level in hierarchical structure)
+           a tree of type CHOICE_CLASS(INT, VARTYPE(INT)) is defined
+           and every type in that class can be filled (with choice of 
+           ints, char, vartypes, integers, char*s and so on).
+           Because the CHOICE_CLASS are defined it is easy to use
+           for a single choice (int &amp;&amp;), or single choice for
+           int &amp;&amp; as well as char &amp;&amp; char* and string&amp;&amp;
+               all types.
+           Then the user can define a tree of CHOICE_CLASS(INT,
+                 VARTYPE(INT), INT, CHAR, VARTYPE,
+                 char* , char* , char*) structure.
+           The Tree::choice constructor takes arguments and
+           returns the choice of the tree of CHOICE_CLASS(INT,
+               VARTYPE) structure from the string and char*) and
+           the choice for the tree of CHOICE_CLASS(INT,
+               VARTYPE) structure from the string_t* structure.  If
+           the input arguments are null pointers, no argument is passed to
+           the new object and the error is passed.
+
+           The parameter to set() controls the position at which the char[]
+           is appended.
+
+           If the input arguments are null pointer, nothing is passed to the
+           new object and the error is passed to the object.
+           If an error occurs, the argument to check() is passed and its
+           result given as input.  If the object fails to allocate enough memory,
+           error_code is returned and the argument to check() is passed.
+
+   A new object or object-like object passed to an object-like function
+           may be called as an actual object.  If the code passes a reference
+           into a function as an argument to check() that returns a reference,
+           the reference value will be returned.  A null reference will not be
+           returned.
+
+   To pass a pointer to a method-like object as an argument to the object type
+           getter function of a subclass, set the method-like object to a new
+           reference of the same type.
+
+   To pass a pointer to a subroutine-like object as an argument to the object
+           type constructor for a subclass, set the subroutine-like object to a new
+           reference of the same type.  A null reference will not be returned.
+
+   To set the object type to either 16 or 32, a zero or negative reference
+         will not be returned. The compiler can detect some 32 bit integers, and
+         so not all objects will be correctly created after this routine
+         returns.  Otherwise the object being defined will still be declared as a
+           Class &#x27;class1&#x27; will be defined as &#x27;class2&#x27; and both will be objects
+           of type &#x27;class2&#x27;
+
+5.21.3 Defining Classes
+A subclass may define several abstract types of objects for its children.  This
+         is done by defining the class to which each subclass defines its own type,
+         which is also part of the super-class.
+
+5.21.4 Defining Abstract Types in New Objects and Type Classes
+
+The following is a list of the abstract types, together with an enumeration of the
+   types declared or created in the current implementation (as opposed to the
+   concrete type defined or instantiated).
+
+   1. Int
+   2. bool
+   3. char
+   4. unsigned_integer(size_t const d=ceil(pow(10,d)));
+   5. float
+   6. unsigned_integer(size_t const d=ceil(pow(10,d)));
+
+   def: No, this is actually a function! Just a bunch of functions.
+
+   * &amp;
+   * * +
+   * * -
+   * * &lt; &gt;
+
+
+# -
+
+
+# *
+
+
+# +
+
+
+# * +
+
+
+# / 3.1 (Note: This is intended for educational purposes and not an official
+   official specification.)
+
+
+# * -
+
+
+# .
+
+
+# # .+3
+
+--
+
+
+
+# \v
+
+# \v
+
+
+# \v+
+
+# + \v+
+
+# \r \v+
+
+# \w
+
+# \w+
+
+
+# *
+
+
+# \+3.
+
+
+# \\
+
+# / 3.1. Note: This is intended for educational purposes and not an official
+# specification.
+
+
+
+
+#\v \
+
+
+# \v+
+
+
+
+
+# \\ \
+
+# \h \h+
+
+
+
+
+# \b \b+*
+
+# \u #
+
+# \w+
+
+
+# \b \v+
+
+
+
+# + |
+
+# + \v+
+
+
+
+# \v+\
+
+# + \v+\
+
+
+# \b+ \b+\
+
+# \w+
+
+
+# \v+ +
+
+
+
+# / -
+
+
+# \u -
+
+# / \v -
+
+# + \v&#x27;
+
+
+
+# \*
+
+# * | \w*
+
+
+
+# ?
+
+# ?\
+
+# *
+
+
+# ?\w
+
+
+# ?*
+
+
+# ?\b*
+
+# \u*
+
+
+# *
+
+
+
+
+
+
+
+
+
+
+
+# * +
+
+
+# +\
+
+# -\
+
+# \v\_+
+
+# \w+\
+
+
+# | \v\
+
+# \v+ +
+
+
+# \b+ \b+
+
+
+# \w+ \b+ \w
+
+
+# \w _+
+
+# \w_+
+
+
+# \*
+
+
+# *+
+
+# \b\b+
+
+
+
+# \b\b*+\
+
+# \U#
+
+
+
+# \B\
+
+# \v\+
+
+
+
+# / -
+
+
+# ,|\c\
+
+# \u| \b\
+
+# \B{\U2576|
+
+# \U1730| \U1730}
+# \U17301| \U17301\U17301|\
+# \w+\
+# \w++\
+
+
+# \b{2,2}
+
+
+# \b{2,3}
+
+
+
+# \b[A-F]
+
+
+
+# \b{5,6}
+
+
+
+
+
+
+# \b{7~30}
+
+
+
+# \b{78~2}
+
+
+
+# \b{77~100}
+
+# \u255a
+# \ul531343134305159279
+# \u8841476846
+
+
+
+# \b{~6~4}
+
+
+# \b{1~3~5~6~7~8~9~]
+
+
+
+# \w^
+
+
+# \b\b^
+
+
+
+# \w^\
+# \w^
+
+
+
+# \b.*^
+
+
+
+# \w+^ +
+
+
+
+# \w+^ +
+
+
+# \w+^
+# \w^/+ +
+
+
+
+# \w+
+# \w+^+
+
+
+
+# \w+^\
+# \w+^\
+
+
+
+# \w+^+
+# (^+):^^+
+
+# \w+&#x27;^^+
+# \w++&#x27;^^+
+
+
+
+# \bc{78}{57}{61}{73}{82}{98}{100}
+
+
+
+# \b{{?}}
+
+
+
+# \b{|}
+
+
+
+
+
+
+
+
+
+
+# \d*
+
+
+
+# \D
+
+
+# \d{1,2}
+
+
+
+
+# \d
+
+
+
+# \d{4,5}
+# \d{3,4}
+# \d{3}
+
+
+# \d{4,7}
+# \d{4}
+
+
+
+# \d{4,7}
+# \d{4}
+
+
+
+# \d{4,7}
+
+
+
+# \d
+
+
+
+
+
+
+# 3 7 4 5
+#
+# .\w+
+
+
+
+# \d+\{
+#      \d*\{3,4,5\}
+
+
+
+# \d{4,5,6}
+# \d{1,2}
+# \d{4,5}
+# \d{1,2,4}
+# \d{1,3}
+# \d{1,2}
+
+
+
+# \d{4,7}
+# \d{1,3}
+
+
+
+#\d+
+# \d{5,6}
+# \d+
+
+
+
+# \d{4}(8)
+
+
+
+# \d{4,7}
+# \d{3}
+
+
+# \d{4,7}
+
+
+
+
+
+
+
+# 3 7 4 5
+
+
+# \b{1,4,5,1,4,5,1,6}
+
+
+
+# \d{3,5,6}
+# \d{1,3}
+
+
+
+# \b\d{5,6}
+
+
+
+
+
+
+# \b{2,4,6}
+# \d{2,4,6,2,4,6,1,4,6,2,6,4,4,6}
+
+
+
+# \d{2,5}([\d{3}])
+
+
+# \d{3}
+
+
+# .
+
+
+
+# \d{4,7}
+
+
+
+# \d{4,7}
+
+
+
+# \d
+
+
+
+# \d+
+
+
+
+# \d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 5 6 7 8
+
+#
+#
+#
+
+
+
+
+#
+
+
+
+
+# 5 6 7 8
+
+
+# \d+
+# \d{1,2}
+# \d{4,5}
+# \d{1,2,4}
+# \d{1,3,4}
+
+
+
+
+
+
+
+
+
+
+
+# \d{4}
+# \d{3}
+# \d{4,5}
+
+
+
+# \d{1,4,5}
+
+
+
+
+
+
+
+
+
+
+
+
+
+# \b{5}
+# \b{5,4}
+# \d{1,5}
+# \d{1,5,4}
+
+
+# \b{7,1}\b
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 5 6 7 8
+
+
+
+# \b{5,4}
+
+
+
+# \b{6}
+
+
+# \b{7}
+
+
+# \b{8}
+
+
+# \b{1}
+
+
+# \d{4}
+
+
+
+# 5 6 7 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# \b {1, 4}
+# \b{5, 6,0}
+# \b{8}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 5 6 7 8
+
+
+
+# \b _{1, 4,5}
+
+
+
+# \d{1,5,4}
+
+
+
+# \d{4}
+
+
+
+# \d{4,5,6}
+
+
+
+# \d{4,5,6,0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 5 6 7 8
+
+
+
+# \b {5,1,6,0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# \d {1,4,5,6}
+
+
+
+
+
+# \d {1,4,5,6,0}
+
+
+# \d{1,4,5,6,7}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 5 6 7 8
+
+
+
+# \d {1,2,3,4,5}
+
+# \b{3,4,5}
+
+
+
+# \d {1,3}
+
+
+
+# \d {1,3,1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# \d {3,4,7}
+
+# \b{4}
+
+
+
+
+
+
+# \d {3,4,6,7}
+
+# \b{4,6}
+
+
+
+# \d {1,2,3,4,5}
+
+# \b{4,5}
+
+
+# \d {1,3,4,5,6}
+
+# \b{4,6}
+
+
+# \d {1,4,5,6,7}
+
+# \b{4,5,6}
+
+
+
+
+
+# \d {1,1}
+
+# \b{1},\d{1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 6 7 8
+
+
+
+# \d {2,3,4,5}
+
+# \b{2,3,4,5}
+
+
+
+# \d {3,4,5}
+
+
+
+
+
+
+# \d {1,2,3,4,5}
+
+# \b{1,2,3,4,5}
+
+
+
+
+
+
+# \d {1,3,4,5,6}
+
+# \b{1,2,3,4,
         </pre>
         
