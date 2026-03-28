@@ -2,8 +2,8 @@
         <h1>The never-ending AI!</h1>
         <h3>This is the output of a text-predicting AI being constantly fed back what it generates. <br>
         Except it's not a particularly smart one, and it has the memory of a goldfish.</h3>
-        <h3>Currently at 67,755 words (408,031 characters). <br>
-        The website updates every 5 minutes or so. Last updated at 06:44 on 29/03/26</h3>
+        <h3>Currently at 68,708 words (414,922 characters). <br>
+        The website updates every 5 minutes or so. Last updated at 07:19 on 29/03/26</h3>
         <h6>AI may produce mistakes/offensive language! Read at your own discretion!</h6>
         <h3>Original prompt: "Hello!"</h3>
         <pre style="white-space: pre-wrap; word-wrap: break-word; border: 1px solid #ccc; padding: 10px;">
@@ -6830,6 +6830,283 @@ while True:
         is_rightChild = False
         is_leftChild = False
         node = root
-        while node
+        while node is not None:
+            is_rightChild = node.child == 2
+            if node.pleftChild is not None:
+                is_rightChild = node.pleftChild.leftChild &lt; 0
+                childNode = node.pleftChild
+                if childNode.leftChild is not None:
+                    node.leftChild.parent = childNode
+                if childNode.parent is not None and childNode.parent.pleftChild &lt; 0:
+                    node.parent.pleftChild = childNode
+                if childNode not in is_rightChild:
+                    childNode.rightChild = node
+                node.rightChild = childNode
+        node.pleftChild = is_rightChild
+        node.rightChild = is_leftChild
+        node = node.rightChild
+    node = node.pleftChild
+    node.leftChild = is_rightChild
+    node = node.rightChild
+
+    # move right (or left) child into left child&#x27;s tail if there is any
+    if node.leftChild:
+        left = node.leftChild
+    new_node = rightChildLeftNode(new_node ,left , node.pleftChild)
+    new_node.rightChild = new_node
+
+    new_node.leftChild = is_rightChild
+    new_node.rightChild.leftChild = new_node
+
+    return new_node
+
+def print_tree_right_child(head):
+    &quot;&quot;&quot;
+    prints the right child node of head
+    :param head: the root of the tree
+    :return:
+    &quot;&quot;&quot;
+    if not head:
+        return
+
+    print_tree_rightChild(head.rightChild)
+    print()
+    head.rightChild.leftChild = head
+    print_tree_rightChild(head.rightChild)
+
+
+def is_balanced(head):
+    &quot;&quot;&quot;
+    checks if head is balanced
+    :param head: the root of the tree
+    :return:
+    &quot;&quot;&quot;
+    while head.val &lt; 1 or head.val &gt; 9:
+        if head.val == 1 or head.val == 9:
+            head.val = 0
+
+        else:
+            if head.left == None and head.right == None:
+                return head.val == 0
+            elif head.left.val == 1 and head.right.val == 9 or head.right.val == 1 and head.left.val == 9:
+                return head.val != 0
+#        else:
+#            print(&quot;The last value of the tree is &quot;, head.val)
+#            print(&quot;Check balancing&quot;)
+
+
+
+def binary_search(head, root_val):
+    if not head or root_val == head.val:
+        return -1
+
+    midpoint = len(head)//2
+    if head[midpoint] &gt; root_val:
+        return binary_search(head, head[midpoint+1:])
+    if head[midpoint] &lt; root_val:
+        return binary_search(head, head[midpoint-1:])
+        self.check_bubble_sort_with_binary_search(head, left, right)
+    if root_val &lt; head[midpoint]:
+        return binary_search(head, root)
+    # otherwise, use our check_bubble_sort_with_binary_search function
+    self.check_bubble_sort_with_binary_search(head, midpoint, l, r, left, r, root_val)
+    # now print the value of the sorted_key in the range range.
+    self.print_sorted_value(low=midpoint, high=l, r, root_val, out_val=0)
+
+
+def sorted_value(root, lower, high, right):
+    # The rightmost element is the middle element of leftmost and middle elements of rightmost
+    # Both values have been obtained.
+    #  These numbers are used by the logic to create the sorted value
+    if lower &lt; middle:
+        print(&quot;Sorted element: &quot;, root.data, &quot; and &quot;, root.data, &quot; is sorted&quot;)
+        print(&quot;sorted value: &quot;, root.data, right)
+    if right &gt;= high:
+        print(&quot;Sorted element: &quot;, root.data, &quot; and &quot;, root.data, &quot; is sorted&quot;)
+        print(&quot;sorted value: &quot;, root.data, right)
+        return
+
+
+
+
+
+if __name__ == &quot;__main__&quot;:
+    root = TreeNode(0)
+    root.data = 42
+    tree = Tree()
+    tree.root = root
+    print(tree.search(42)) #1
+    print(tree.search(43)) #5
+    tree2 = Tree(0)
+    tree2.root = root #2
+    print(tree2.search(9)) #2
+    print(tree2.search(42)) #7
+
+
+    
+
+#22
+
+## A Simple Sorting Algorithm using Priority Queue
+import queue
+n = int(input()) # Size of queue
+cnt=0  # Number of items
+tup={}
+while n&gt;0:
+    v=input() # Take a line from user
+    tup[v]=v # This list contains order of items in the queue.
+    n-=1
+    queue.put((v,tup)) # Store the order of the item in the queue. It will always be sorted from the lowest (first) to the highest (last).
+    tup.clear() # Clear the dictionary.
+    n-1
+# Sort the queue by ordering
+for v in tup:
+    # Sorting in non-decreasing order
+    if (v.key) &lt; (len(tup)-1):
+        v.item = v.key
+    else:
+        if (v.key &lt; (len(tup)-1)):
+            v.item = v.key + v.item  # Increase the value of list element &#x27;item&#x27; to be equal to maximum value in list &#x27;tup&#x27;
+        else:
+            v.item = len(tup)+1 # Increase the sum of &#x27;tup&#x27; + 1
+    
+if n&gt;(r+s):
+    
+    if n&gt;=r and s &lt;= s+r:
+        tup = [v for v in tup+[None, None]]
+    else:
+        tup = [v.item for v in tup+[None, None]]
+    
+    tup.pop()
+    if n &lt; len(r) and v.key == s:
+        print(tup)
+        print(len(v.item))
+        
+tup.clear()
+    
+# print(tup)
+# tup.append([1, 2] )     # Append tuple 1 to the list
+tup.append(3)
+tup.append(4)
+tup.append(5)
+print(set(tup))
+print(tuple((tup)))  
+
+# Create an empty list list
+# print(list(set(list(range(10))))); 
+
+list =  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+# Trick
+list = [1, 2, 3]
+# print(list)
+
+# print(list)
+
+my_list = list()
+for i in range(len(list)):
+    my_list.append(list[i])
+
+print(my_list)
+# Trick
+my_list = [1, 2]
+for i in list:
+    my_list.append(i)
+
+for i in my_list:
+    print(*i) 
+
+# Create an empty list list
+
+my_list = []
+# print(my_list)
+# i = 0
+
+# i = 1
+
+# print(my_list[:i])
+
+# i = 2
+
+# print(my_list[i:-1])
+
+# i = 3
+
+# print(my_list[0:3])
+
+# print(my_list[0:])
+
+# a = my_list[:] # Change a
+# print(my_list)
+
+
+&quot;&quot;&quot;
+# Python program to add elements to a list (to add more elements)
+# By &lt;NAME&gt;
+# E.60:0
+
+# The first argument is the list to which you add elements
+# A list has an append(append) method that allows you to add elements to one end
+# and then to the other end
+# The following parameters are used to indicate start and end points between which 
+# you are adding elements
+# The following methods are included to help deal with the problem of how to deal
+# with the end of an area (or, to stop the end of the area from continuing).
+x1 = None
+x1 = 1
+x2 = 1
+x2 = 0
+# Return a tuple with the starting x, the end point, and the distance traveled between the two edges.
+def end_of_area(x1, x2, x_end=None, f_f = &#x27;w&#x27;):
+    if not x2:
+        x1, x2 = x1, x2
+    else:
+        x1, x2 = x1, x2 + ((f_f if x1 &gt; x2 else 0) * x2 * x_end)
+    return (x1, x2)
+
+print(end_of_area(15, 15, 10))
+print(end_of_area(15, 15, 5))
+
+print(&quot;End&quot;)
+
+&quot;&quot;&quot;
+for i in range(15):
+    for x in range(i, len(map)):
+        map[x, i] += 1
+
+for i in range(len(5))[::-1]:
+    map[0] += 1
+    map[i] += 1
+
+print(len(map))
+print(map)
+
+for i in range(5):
+    for x in range(i-1,-1,-1):
+        map[x, i-1] += 1
+    map[i-1] += 1
+for i in range(1,5):
+    map[i] += 1
+    
+&quot;&quot;&quot;
+
+&quot;&quot;&quot;
+For example:
+
+    x[0] = 1
+    x[1] = 5
+    x[2] = 3
+    x[3] = 4
+    x[4] = 5
+    &quot;&quot;&quot;
+
+# For each row and column
+
+import numpy as np
+&quot;&quot;&quot;
+For example:
+
+    map = [[2,4],[1,4],[2,6],[8,6],[3,
         </pre>
         
