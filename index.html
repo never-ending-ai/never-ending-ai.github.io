@@ -2,8 +2,8 @@
         <h1>The never-ending AI!</h1>
         <h3>This is the output of an LLM being constantly fed back what it generates. <br>
         Except it's not a particularly smart one, and it has the memory of a goldfish.</h3>
-        <h3>Currently at 131,360 words (757,536 characters). <br>
-        The website updates every 5 minutes or so. Last updated at 17:22 on 29/03/26</h3>
+        <h3>Currently at 131,844 words (762,765 characters). <br>
+        The website updates every 5 minutes or so. Last updated at 17:31 on 29/03/26</h3>
         <h6>AI may produce mistakes/offensive language! Read at your own discretion!</h6>
         <h3>Original prompt: "Hello!"</h3>
         <pre style="white-space: pre-wrap; word-wrap: break-word; border: 1px solid #ccc; padding: 10px;">
@@ -16984,6 +16984,83 @@ def _generate_ids(s):
         if len(lddrs) == 0 and len(ldc) == 0:
             print(&quot;s: empty&quot;)
             f = open(&quot;s.txt&quot;)
-            print(&quot;s:&quot; + str(len(s)) + &quot; t:&quot; + str(len(t)) + &quot; u:&quot; + str(len(u)) + &quot; k:&quot; + str(len(k)) + &quot; p:&quot; + str(len(p)) + &quot; s:&quot; + str(len(s)) + &quot; t:&quot; + str(
+            print(&quot;s:&quot; + str(len(s)) + &quot; t:&quot; + str(len(t)) + &quot; u:&quot; + str(len(u)) + &quot; k:&quot; + str(len(k)) + &quot; p:&quot; + str(len(p)) + &quot; s:&quot; + str(len(s)) + &quot; t:&quot; + str(len(t)) + &quot; u:&quot; + str(len(u))
+            print (&quot;s:&quot; + str(k) + &quot; t:&quot; + str(k))
+            f.close()
+        else:
+            if ldc &lt; ldrs[k]:
+                ldc = ldc + len(ldr)
+            else:
+                ldc = ldc + len(ldc)
+            ldrs[k] = ldc
+        ldp2 = 2*ldc-2*ldr*rdrs[k]
+        print(&quot;l_dp : &quot; + str(ldrd) + &quot; + &quot; + str(ldrs[k])+&#x27; = &#x27; + str(lcd) + &quot;(&quot; + str(ldrs[k-1]) + &quot;)&quot; + str(ldc + ldrs[k-1])+ &quot;)&quot;
+        t.write(&quot;(&quot; + str(ldr) + &quot;), &quot; + str(lddc) + &quot; and : &quot; + str(ldrs[k])+ &quot; (&quot; + str(ldr) +  &quot;\n&quot;)
+        print(&quot;t.write(&quot;) + t.readline().strip()
+        print(&quot;&quot;)
+        lpr2 = 2*rds[k-1] - len(rds[k-1]) + &quot; = &quot; + str(lds[k])+&quot; + &quot; + str(ldrs[k])+ &quot;(&quot;+ str(ldrs[k-1]) +&quot;)&quot;
+        #lpr2 = 2*rds[k] - len(rds[j+1]) + &quot; = &quot; + str(lds[j+1])+&quot; + &quot; + str(ldrs[j+1])+ &quot;(&quot; + str(ldr) +  &quot;\n&quot;)
+        lpr2 = 2*rds[0]*rds[len(rds)-1] + lldrs[k] + lldrs[j-1]
+        
+        h3 = &quot;(&quot; + &quot;(&quot;+ str(ldrs[k])+ &quot;), &quot;
+        h4 = &quot;(&quot; + str(ldcs[k])+ &quot;), &quot;
+        h5 = &quot;(&quot;+ str(ldrc[0])+ &quot;), &quot;
+        h6 = &quot;(&quot;+ str(ldrs[lpr-2])+ &quot;), &quot;
+        
+        rds2.write()
+        lpr2.write(&quot; \n&quot;)
+        h5 = h5 + str(ldrs[k]) + &quot;\n&quot;
+        h4 = &quot; &quot; + h4 + &quot;\n&quot;
+        h6 = h6 + str(ldcs[k])
+        h3 = &quot; &quot; + h3 + &quot;\n&quot;
+        h2 = &quot; &quot; + h2 + &quot;\n&quot;
+        h1 = &quot;\n&quot;
+        return(h5,h6,h2,h1)
+    return(0)
+
+
+def print_matrix(matrix1, matrix2, n, d):
+    print(&quot;R0&quot;)
+    if n == 0:
+        print(&quot;\n\nR0:&quot;)
+    else:
+        matrix3[m0, m0] = matrix1[k0, m0]  
+        matrix3[k0, 1] = matrix2[m0, d]  
+        matrix3[k0, 2] = matrix1[k0, m1] \
+          (matrix3[k0, 2] &lt;&lt; 1)
+        print_diag(matrix3[k0, 1], matrix3[k0, 3])
+
+    k1 = 300 - m0 * m0
+    k2 = 300 - m0 * m1
+    k3 = 300 - m0 * m2
+    print_diagonal(matrix3[k2, k3], matrix3[k2, k0])
+    print_diag(matrix3[k1, k2], matrix3[k1, k0])
+    print_diag(matrix3[k3, k1], matrix3[k3, k0])
+
+#-------------------------------------------------------------------------------
+def print_diag(matrix_list):
+    t0 = len(matrix_list)
+    while t0 &gt; 0:
+        print matrix_list[t0 - 1]
+        t0 -= 2
+
+    print(&quot;----- \n&quot;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    # f1 = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+    # f2 = [[0,0,0,0,0],[4,0,4,0,0],[0,0,0,0,0],[0,0,1,0,0,0],[0,0,1,0,0,0]]
+    # f3 = [[0,0,0,0,0],[1,0,1,1,1],[0,1,0,1,1],[1,1,1,1,1],[0,1,0,1,0],[1,1,1,0,1],[1,1,1,0,1],[1,1,1,1,1],[0,1,1,1,1]]
+
+    matrix_list = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]])
+
+In this exercise, you want to determine the number of consecutive odd integers that meet the following constraints:
+
+• The number of contiguous odd integers is 4695.
+
+A subsequence is a group of two or more integers in such a way that each of the two or more contiguous sub-sequences is obtained by changing the number of odd integers in the original sub-sequence. For example, if the initial sub-sequence is 4256893, and other sub-sequences are generated by changing either the first 2 or the last six integers of the original sub-sequence: 2212460, 2158242, 212460, 834652, and 4, respectively, we will receive the same final sequence of 425683.
+  • We can also choose 2, 25, or 4 as the first six numbers in the sequence and 323 as the last, thus we obtain a 42434360, 4158264, 533568, 876456, 933663, which is the least number such that 42434360 and 4158264 are equal!
+
+We can easily compute the total number of 42434360 cases of this problem, as follows. We have the 42434360, 4158264, 4161265, 4456874, 49
         </pre>
         
