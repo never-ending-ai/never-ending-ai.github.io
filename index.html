@@ -2,8 +2,8 @@
         <h1>The never-ending AI!</h1>
         <h3>This is the output of an LLM being constantly fed back what it generates. <br>
         Except it's not a particularly smart one, and it has the memory of a goldfish.</h3>
-        <h3>Currently at 130,521 words (751,001 characters). <br>
-        The website updates every 5 minutes or so. Last updated at 17:15 on 29/03/26</h3>
+        <h3>Currently at 131,360 words (757,536 characters). <br>
+        The website updates every 5 minutes or so. Last updated at 17:22 on 29/03/26</h3>
         <h6>AI may produce mistakes/offensive language! Read at your own discretion!</h6>
         <h3>Original prompt: "Hello!"</h3>
         <pre style="white-space: pre-wrap; word-wrap: break-word; border: 1px solid #ccc; padding: 10px;">
@@ -16756,6 +16756,234 @@ class Tokenize():
                 if newline:
                     print &quot;LAST line:&quot;, lines[startidx:endidx]
                     newline = True
-            except Exception as e
+            except Exception as e:
+                print &quot;Error loading : %s&quot;, e.args
+                       
+
+
+
+
+
+# -----------------------------------------------------------
+# This function is meant to convert a list, csv etc to a string
+# with a delimiter (the &quot;,&quot; for string, &#x27;)&#x27; for list, etc.)
+# -----------------------------------------------------------
+def list_to_string(list_d):
+    for line in list_d:
+        out = &quot;&quot;
+        line = line.replace(&quot;\&quot;&quot;, &quot;&quot;)
+        line = line.replace(&quot;\r&quot;, &quot;&quot;)
+        line = line.replace(&quot;\t&quot;, &quot;&quot;)
+        out = out + (&quot;\&quot;&quot; + line + &quot;\&quot;&quot; )
+#     out += &quot;&lt;&quot; + line + &quot;&gt; &quot;
+#     out += &quot;|&quot; + line.pop() + &quot;|&quot; + &quot;|&quot; + &quot;\&quot;\&quot;|\&quot;|&quot;
+        return out
+#     out += &quot;&lt;&quot; + line.pop() +     &quot;|&quot; + &quot;|&quot; + \
+        #    &quot;\&quot;\&quot;|\&quot;|&quot; + line.pop() +     &quot;&#x27;|&quot;
+#     out += &quot;   |&quot; + line.pop()
+        # out += &quot;---&quot; + line.pop()
+        # out += &quot;---&quot; + line.pop()+&quot;\&quot;\&quot;|&quot;
+        # out += &quot;\&quot;\&quot;|&quot; + line.&quot;\&quot;&quot;
+        # print(out)
+    except UnicodeCharacterError:
+        print(&quot;&lt;&quot; + line + &quot;&gt; &quot;)
+    else:
+        print(&quot;&#x27;&quot; + out + &quot;&#x27;&quot;)
+if __name__ == &#x27;__main__&#x27;:
+        main()
+        # print(&quot;&lt;%s&gt;&gt;&quot; % &quot;\n&quot; % &quot;\n&quot; % &quot;\n&quot; % &quot;&quot;&quot;*%%%%%%%*%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n&quot; % &quot;\n&quot; % &quot;&quot;&quot;*&quot;&quot;&quot; +
+#      &quot;,%%&quot;)
+        # print(&quot;&lt;%s%&lt;/%-&lt;%s&gt;&gt;&quot; % &quot;&quot;&quot;\n&quot; % &quot;&quot;&quot;*%%&quot;%&quot;&quot;&quot; + &quot;\n&quot; % &quot;&quot;&quot;*%%&quot; + &quot;&quot;&quot; +
+#      &quot;   %%&quot; + &quot;&quot;&quot; *&quot; + &quot;&quot;&quot; *&quot; + &quot;&quot;&quot;*&quot;+&quot;&quot;&quot; + &quot;&quot;&quot;*&quot;&quot;&quot; + &quot;&quot;&quot; *&quot; *&quot;&quot;&quot; *&quot;&quot;&quot;*&quot;&quot;&quot;+&quot;&quot;&quot; * &quot; ) % &quot;&quot;&quot;*&quot;&quot;&quot; + &quot;&quot;&quot;*&quot;&quot;&quot;*&quot;&quot;&quot;)
+
+        textLine.append(textLine[0:-1])
+        textLine[0] = &quot;\n&quot;
+
+if __name__ == &#x27;__main__&#x27;:
+    print(&quot;&quot;)
+    textLine = []
+    tc = StringIO()
+    print(tc)
+    fd = io.StringIO()
+    csv = csvio = open(tc, &quot;w&quot;)
+    csv.close()
+    f = TextFile(fd)
+    csv = csvio.tostring(f.ft, &#x27;utf-8&#x27;)
+    print(csv.decode(&#x27;utf-8&#x27;))
+    f.close()
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main(sys.argv[1:])
+
+
+
+
+
+print &quot;10. 双指针操作&quot;
+textLine = [u&quot;\n&quot;, u&quot;\n&quot;, u&quot;\n&quot;, u&quot;\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;\n\n&quot;, u&quot;hello!&quot;, u&quot;\n&quot; ]
+print(textLine)
+
+for i in range(5):
+    k = 0
+    l = 1
+    for j in range(20):
+        l += 1
+
+    if l/37 &gt; i:
+        textLine[5*i + 2] = textLine[5*i + 1] + textLine[5*(i+1)+1]
+        textLine[5*i + 2] = textLine[5*i + 0] + textLine[5*(i+2)+1]
+        l = 3
+        k += 1
+    if l/7 &gt; i:
+        textLine[5*i + 0] = textLine[5*i + 1] + textLine[5*i]
+        textLine[5*i + 1] = textLine[5*i] + textLine[5*i+1]
+        l = 3
+        k += 2
+    if l/11 &gt; i:
+        textLine[5*i + 0] = textLine[5*i + 1] + textLine[5*i]
+        textLine[5*i + 1] = textLine[5*i] + textLine[5*i+1]
+        l = 14
+        k += 2
+    i += 3
+    if i == 1:
+        textLine[6*i + 0] = textLine[6*i+1] + textLine[6*i]
+        textLine[6*i + 2] = textLine[6*i+3]
+    elif i == 2:
+        textLine[5*i + 0] = textLine[5*i+1] + textLine[5*i+2]
+        textLine[5*i+1] = textLine[5*i+3]
+    elif i == 3:
+        textLine[5*i + 1] = textLine[5*i+2] + textLine[5*i]
+        textLine[5*i+2] = textLine[5*i+1]
+    elif i == 4:
+        textLine[5*i + 3] = textLine[5*i+1]
+        textLine[5*i] = textLine[5*i+4]
+    else:
+        i += 0
+    textLine[6*i + 0] = &#x27;T-x&#x27;, &#x27;T-x&#x27;
+    textLine[6*i + 1] = &#x27;y&#x27;, &#x27;y&#x27;
+    textLine[6*i + 2] = &#x27;z&#x27;, &#x27;z&#x27;
+    textLine[6*i + 3] = &#x27;x&#x27;, &#x27;x&#x27;
+    textLine[6*i + 4] = &#x27;T-x&#x27;, &#x27;T-x&#x27;
+    return textLine
+def getMergeList(iterObj, i=0, sep=&quot;:&quot;) -&gt; str:
+    &quot;&quot;&quot;get the merge list of iterObj, i being an index
+    &quot;&quot;&quot;
+    if sep == &quot; &quot;:
+        sep = 2
+    textLine = &quot;&quot;
+    i_arr = []
+    while i &lt; iterObj.length:
+        i_arr.append(0)
+
+        textLine = textLine + sep + getMergeList(iterObj,i, i_arr)
+        i += i_arr.index(0)
+        i_arr = []
+    textLine = textLine[:-1]
+    return textLine
+def getMergeList(iterObj, i=0, sep=:&quot;)&quot;) -&gt; str:
+    &quot;&quot;&quot; 
+     获取两个链表之间的空链表元素数�超过二
+    &quot;&quot;&quot;
+    if i &lt; iterObj.length:
+        count = i
+
+    else:
+        count = iterObj.length
+
+        if count &lt;= 1:
+            return &quot;&quot;
+        else:
+
+            newlist = []
+            newlist = iterObj.append(count)
+            newlist = getMergeList(iterObj,i+1,sep)
+            newlist = newlist + i
+            return newlist
+
+    return []
+def getMaxList(iterObj, i=0, sep=:&quot;,[&quot;)):
+    &quot;&quot;&quot; 
+     获取某个值最大的组成集合。
+     :param iterObj: 这个值
+     :param i: 取最大组成集合的开尾空间 为[]
+     :param sep: 这里有关的，分配为,&quot;&quot;&quot;
+    if i &lt; iterObj.length:
+        return newlist
+    else:
+        print(&quot;i 没有值&quot;)
+        return []
+def main():
+    with open(“t0”) as f:
+        print(f.readline())
+        x = f.readline().split(&quot;,&quot;)
+        if x[0] == &quot;B1010102&quot;:
+            i = int(x[1])
+            m = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+            q = [19,18,17,16,14,13,12,11,10,9,8,7,6,&#x27;]}
+        else:
+            print(f&quot;.&quot;{x[0]}:{q[1]}&quot;)
+            print(&quot;  关于规则登入的课程&quot;)
+            print(&quot;&quot;) 
+            print(&quot;  根据阴影值可以有1~7颜色值&quot;)
+            # 受阴影的颜色为 0~255  集合可能是有效值的元素 , 0代表��������B1010102，2&amp;3则是 0�������B1010102�������B1010102�������B153682�������B�������B1010102�������20080722031119726 : 153682
+        k = []
+        for _ in range(n):
+            k.append(int(m[0]) &gt;&gt; 4 )
+        for x in range(n):
+            x += int(m[0]) &gt;&gt; 4
+        k.append(x)
+        k.append(len(s))
+        #s[0] = x &lt;&lt; (s.find(&#x27;:&#x27;) - 1)
+        #s[11-i] = x &gt;&gt; 4
+            for k in range(1, len(s)):
+                s[i-k] = int(str(k)[1:] + s[i-k])
+
+    if _c is not None:
+        #print(_c)
+        l = _c[-1:]
+        k = _c[:-1]
+
+    return k, l
+            
+            
+                                                        
+                        
+                              
+        
+            
+        
+# 2.4.
+def _merge_strings(_c, _l, k, ldrs):
+    #print(_c)
+    lddrs[k] = _c
+    lddrs[k] = _l
+    lddrs[k] = _ldrs
+
+def _generate_ids(s):
+    l = len(s)
+    k = []
+    ldrs = [list(range(0, l - 1))]
+    lddrs = [list(range(0, l - 1))]
+    
+    while True:
+        # print(len(s))
+        lcc = s[0].lower()
+        if not lcc in lddrs:
+            lcc.reverse()
+        l = lddrs[len(l)]
+        lddrs[len(l)-1] = l
+        ldc = 1
+        while lcc.find(_lc) == -1 and ldc &lt; ldrs[k-1]:  # if lc exist for k-1 positions
+            ldc += 1
+        if lc not in lddrs or ldrs[lcc[0]] != ldrs[k-1]:
+            k.append(lcc[0])
+        ldrs[k] = ldc
+        print(&quot;i:&quot; + str(len(lddrs)) + &quot; &quot; + lcc[0] + &quot; &quot; + lcadd)
+        k.pop()
+        if len(lddrs) == 0 and len(ldc) == 0:
+            print(&quot;s: empty&quot;)
+            f = open(&quot;s.txt&quot;)
+            print(&quot;s:&quot; + str(len(s)) + &quot; t:&quot; + str(len(t)) + &quot; u:&quot; + str(len(u)) + &quot; k:&quot; + str(len(k)) + &quot; p:&quot; + str(len(p)) + &quot; s:&quot; + str(len(s)) + &quot; t:&quot; + str(
         </pre>
         
